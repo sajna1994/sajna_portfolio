@@ -1,0 +1,26 @@
+.magnetic-button {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 15px 25px;
+
+  border-radius: 50px;
+
+  background: var(--gold);
+
+  color: #080808;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+
+  will-change: transform;
+}
+
+.magnetic-button:hover {
+  background: #e0c48c;
+}

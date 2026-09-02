@@ -1,0 +1,511 @@
+.projects {
+  background: var(--surface);
+}
+
+.projects-heading {
+  display: flex;
+
+  align-items: end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-top: 30px;
+
+  margin-bottom: 80px;
+}
+
+.projects-heading p {
+  max-width: 400px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+}
+
+.projects-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.project-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr 60px;
+
+  gap: 30px;
+
+  align-items: center;
+
+  padding: 45px;
+
+  background: var(--surface-light);
+
+  border: 1px solid var(--border);
+
+  transition: border 0.3s;
+}
+
+.project-card:hover {
+  border-color: rgba(201, 168, 106, 0.5);
+}
+
+.project-number {
+  color: var(--gold);
+
+  font-size: 13px;
+}
+
+.project-category {
+  color: var(--muted);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.project-content h3 {
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(28px, 4vw, 45px);
+
+  font-weight: 500;
+
+  margin: 12px 0 15px;
+}
+
+.project-content p {
+  max-width: 700px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+.project-tech {
+  display: block;
+
+  margin-top: 20px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+}
+
+/* =========================================
+   PROJECT ARROW BUTTON
+========================================= */
+
+.project-arrow {
+  width: 50px;
+  height: 50px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: transparent;
+
+  color: var(--white);
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.project-card:hover .project-arrow {
+  background: var(--gold);
+
+  color: #000;
+
+  transform: rotate(45deg);
+}
+
+
+/* =========================================
+   PROJECT MODAL
+========================================= */
+
+.project-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background: rgba(0, 0, 0, 0.88);
+
+  backdrop-filter: blur(15px);
+}
+
+
+/* =========================================
+   MODAL CONTENT
+========================================= */
+
+.project-modal-content {
+  position: relative;
+
+  width: min(1100px, 95vw);
+
+  max-height: 92vh;
+
+  overflow-y: auto;
+
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 30px 100px rgba(0, 0, 0, 0.7);
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.modal-close {
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  z-index: 10;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  color: var(--white);
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.modal-close:hover {
+  background: var(--gold);
+
+  color: #000;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================
+   PROJECT GALLERY
+========================================= */
+
+.project-gallery {
+  position: relative;
+
+  width: 100%;
+
+  height: 550px;
+
+  background: #050505;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+.project-gallery img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================
+   GALLERY ARROWS
+========================================= */
+
+.gallery-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  width: 45px;
+
+  height: 45px;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 50%;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  color: white;
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.gallery-arrow:hover {
+  background: var(--gold);
+
+  color: #000;
+}
+
+.gallery-prev {
+  left: 20px;
+}
+
+.gallery-next {
+  right: 20px;
+}
+
+
+/* =========================================
+   MODAL DETAILS
+========================================= */
+
+.modal-details {
+  padding: 35px 40px 20px;
+}
+
+
+.modal-category {
+  color: var(--gold);
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+
+.modal-details h2 {
+  margin-top: 10px;
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(30px, 4vw, 48px);
+
+  font-weight: 500;
+}
+
+
+.modal-details p {
+  max-width: 750px;
+
+  margin-top: 15px;
+
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  font-size: 14px;
+}
+
+
+.modal-technologies {
+  display: block;
+
+  margin-top: 20px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   THUMBNAILS
+========================================= */
+
+.gallery-thumbnails {
+  display: flex;
+
+  gap: 12px;
+
+  padding: 10px 40px 35px;
+
+  overflow-x: auto;
+}
+
+
+.thumbnail {
+  width: 100px;
+
+  height: 65px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 1px solid var(--border);
+
+  background: #080808;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  opacity: 0.5;
+
+  transition: 0.3s;
+}
+
+
+.thumbnail:hover {
+  opacity: 0.8;
+}
+
+
+.thumbnail.active {
+  opacity: 1;
+
+  border-color: var(--gold);
+}
+
+
+.thumbnail img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .project-modal {
+    padding: 15px;
+  }
+
+
+  .project-modal-content {
+    width: 100%;
+
+    max-height: 95vh;
+  }
+
+
+  .project-gallery {
+    height: 300px;
+  }
+
+
+  .modal-details {
+    padding: 25px 20px 15px;
+  }
+
+
+  .modal-details h2 {
+    font-size: 30px;
+  }
+
+
+  .modal-details p {
+    font-size: 13px;
+  }
+
+
+  .gallery-thumbnails {
+    padding: 10px 20px 25px;
+  }
+
+
+  .thumbnail {
+    width: 80px;
+
+    height: 55px;
+  }
+
+
+  .gallery-arrow {
+    width: 38px;
+
+    height: 38px;
+  }
+
+
+  .gallery-prev {
+    left: 10px;
+  }
+
+
+  .gallery-next {
+    right: 10px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .projects-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+
+    padding: 30px;
+  }
+
+  .project-arrow {
+    position: absolute;
+
+    right: 25px;
+    top: 25px;
+  }
+}
+/* -------------------------------- */

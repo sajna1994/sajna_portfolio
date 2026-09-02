@@ -1,0 +1,8 @@
+main {
+  overflow: hidden;
+}
+
+::selection {
+  background: var(--gold);
+  color: #000;
+}

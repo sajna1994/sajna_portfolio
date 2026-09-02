@@ -1,0 +1,462 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about {
+  background: var(--surface);
+}
+
+
+/* =========================================
+   ABOUT HEADING
+========================================= */
+
+.about-heading {
+  display: grid;
+
+  grid-template-columns: 1fr 0.7fr;
+
+  gap: 80px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+.about-heading p {
+  color: var(--muted);
+
+  line-height: 1.8;
+
+  max-width: 400px;
+
+  font-size: 15px;
+}
+
+
+/* =========================================
+   MAIN ABOUT CONTENT
+========================================= */
+
+.about-content {
+  display: grid;
+
+  grid-template-columns: 1fr 0.9fr;
+
+  gap: 70px;
+
+  align-items: start;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.about-left {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 50px;
+}
+
+
+/* =========================================
+   ABOUT TEXT
+========================================= */
+
+.about-text {
+  color: var(--muted);
+
+  line-height: 1.9;
+
+  font-size: 16px;
+
+  max-width: 600px;
+}
+
+.about-text p + p {
+  margin-top: 22px;
+}
+
+
+/* First paragraph */
+
+.about-intro {
+  color: var(--text);
+
+  font-size: 20px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   ABOUT IMAGE
+========================================= */
+
+.about-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 520px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border);
+
+  background: #080808;
+
+  border-radius: 2px;
+}
+
+
+/* Image */
+
+.about-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  display: block;
+
+  filter:
+    brightness(0.72)
+    contrast(1.05);
+
+  transition:
+    transform 1s ease,
+    filter 0.8s ease;
+}
+
+
+/* Image hover */
+
+.about-image-wrapper:hover .about-image {
+  transform: scale(1.04);
+
+  filter:
+    brightness(0.85)
+    contrast(1.05);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.about-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 50%,
+      rgba(0, 0, 0, 0.75)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   IMAGE TEXT
+========================================= */
+
+.about-image-overlay {
+  position: absolute;
+
+  bottom: 28px;
+
+  left: 30px;
+
+  z-index: 2;
+}
+
+.about-image-overlay span {
+  color: var(--gold);
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  font-weight: 500;
+}
+
+
+/* =========================================
+   ABOUT CARDS
+========================================= */
+
+.about-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.about-card {
+  position: relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--surface-light),
+      rgba(24, 24, 27, 0.6)
+    );
+
+  border: 1px solid var(--border);
+
+  padding: 25px;
+
+  min-height: 230px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.4s ease,
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+
+/* Gold glow */
+
+.about-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120px;
+
+  height: 120px;
+
+  top: -60px;
+
+  right: -60px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(201, 168, 106, 0.08);
+
+  filter: blur(25px);
+
+  transition: 0.4s;
+}
+
+.about-card:hover::before {
+  transform: scale(1.5);
+
+  background:
+    rgba(201, 168, 106, 0.14);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.about-card svg {
+  color: var(--gold);
+
+  font-size: 25px;
+
+  margin-bottom: 28px;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.about-card:hover svg {
+  transform:
+    translateY(-3px)
+    scale(1.08);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.about-card h3 {
+  font-size: 17px;
+
+  font-weight: 500;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.about-card p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.about-card:hover {
+  border-color:
+    rgba(201, 168, 106, 0.45);
+
+  background:
+    linear-gradient(
+      145deg,
+      #191919,
+      #111113
+    );
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .about-content {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .about-image-wrapper {
+    height: 450px;
+  }
+
+  .about-left {
+    order: 1;
+  }
+
+  .about-image-wrapper {
+    order: 2;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .about-heading {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+  }
+
+  .about-cards {
+    grid-template-columns:
+      repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .about-heading {
+    gap: 20px;
+
+    margin-bottom: 40px;
+  }
+
+  .about-content {
+    gap: 45px;
+  }
+
+  .about-image-wrapper {
+    height: 300px;
+  }
+
+  .about-image {
+    object-position: center;
+  }
+
+  .about-text {
+    font-size: 15px;
+
+    line-height: 1.8;
+  }
+
+  .about-intro {
+    font-size: 18px;
+  }
+
+  .about-cards {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .about-card {
+    min-height: auto;
+
+    padding: 25px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .about-image-wrapper {
+    height: 240px;
+  }
+
+  .about-image-overlay {
+    bottom: 20px;
+
+    left: 20px;
+  }
+
+  .about-image-overlay span {
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .about-card {
+    padding: 22px;
+  }
+
+}

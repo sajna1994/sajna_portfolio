@@ -1,0 +1,48 @@
+.footer {
+  background: var(--background);
+
+  border-top: 1px solid var(--border);
+
+  padding: 40px 0;
+}
+
+.footer-container {
+  width: min(90%, 1200px);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.footer strong {
+  font-size: 18px;
+
+  letter-spacing: 2px;
+}
+
+.footer strong span {
+  color: var(--gold);
+}
+
+.footer p {
+  color: var(--muted);
+
+  font-size: 12px;
+
+  margin-top: 7px;
+}
+
+@media (max-width: 600px) {
+
+  .footer-container {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,59 @@
+.page-loader {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  background: #0a0a0b;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.loader-content {
+  width: 280px;
+
+  text-align: center;
+}
+
+.loader-logo {
+  font-family: "Playfair Display", serif;
+
+  font-size: 42px;
+
+  letter-spacing: 4px;
+}
+
+.loader-logo span {
+  color: var(--gold);
+}
+
+.loader-content p {
+  margin-top: 15px;
+
+  color: var(--muted);
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+.loader-line {
+  height: 1px;
+
+  width: 100%;
+
+  background: rgba(255,255,255,0.1);
+
+  margin-top: 40px;
+}
+
+.loader-progress {
+  height: 100%;
+
+  background: var(--gold);
+}
